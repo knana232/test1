@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="0.99.7561.40250"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="120">
+    <identity>
+      <id>d98d7bc4-b0c3-497c-9788-f06a059ba379</id>
+      <revision>7</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="true" viewMode="0" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="1" orientation="Portrait" width="850" height="1100" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="0.99.7561.40250" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="Math Region" version="0.99.7561.40250" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="TextRegion" version="1.11.7561.40250" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="27" top="18" width="297" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p bold="true" fontName="Arial">Pipeline Wall Thickness Design, ASME B31.8</p>
+      </text>
+    </region>
+    <region left="855" top="45" width="70" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">degC</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="63" width="134" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Pipe Outer Diameter</p>
+      </text>
+    </region>
+    <region left="306" top="63" width="98" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">8.625</e>
+          <e type="operand" style="unit">in</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="513" top="63" width="96" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.2191</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="99" width="223" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Wall thickness, corrosion allowance</p>
+      </text>
+    </region>
+    <region left="306" top="99" width="85" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t.cor</e>
+          <e type="operand">0</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="144" width="111" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Design Pressure</p>
+      </text>
+    </region>
+    <region left="306" top="144" width="105" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">P.d</e>
+          <e type="operand">5180</e>
+          <e type="operand" style="unit">psi</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="513" top="144" width="126" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">P.d</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">35.7148</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="189" width="80" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Pipe Grade</p>
+      </text>
+    </region>
+    <region left="306" top="189" width="110" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">P.grade</e>
+          <e type="operand" style="string">X52</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="513" top="189" width="123" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">3700</e>
+          <e type="operand">1.4</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">5180</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="234" width="213" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Specified Minimum Yield Strength</p>
+      </text>
+    </region>
+    <region left="306" top="234" width="82" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">S</e>
+          <e type="operand">52</e>
+          <e type="operand" style="unit">ksi</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="513" top="234" width="128" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">S</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">MPa</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">358.5274</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="279" width="151" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Operating Temperature</p>
+      </text>
+    </region>
+    <region left="306" top="279" width="116" height="30" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">T.opt</e>
+          <e type="operand">25</e>
+          <e type="operand">degC</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="963" top="324" width="107" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">mm</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.001</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="333" width="184" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Temperature Derating Factor</p>
+      </text>
+    </region>
+    <region left="306" top="333" width="62" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">T</e>
+          <e type="operand">1.0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="963" top="360" width="115" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">in</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.0254</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="378" width="100" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Location Class</p>
+      </text>
+    </region>
+    <region left="306" top="378" width="126" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">LOC</e>
+          <e type="operand" style="string">Class 4</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="963" top="396" width="115" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.3048</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="423" width="95" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Design Factor</p>
+      </text>
+    </region>
+    <region left="306" top="423" width="62" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">F</e>
+          <e type="operand">0.6</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="522" top="423" width="122" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">0.5</e>
+          <e type="operand" style="unit">in</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mm</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">12.7</e>
+        </result>
+      </math>
+    </region>
+    <region left="828" top="459" width="155" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1662</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20276.4</e>
+        </result>
+      </math>
+    </region>
+    <region left="27" top="477" width="158" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Longitudinal Joint Factor</p>
+      </text>
+    </region>
+    <region left="306" top="477" width="62" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">E</e>
+          <e type="operand">1.0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="828" top="504" width="155" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1676</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20447.2</e>
+        </result>
+      </math>
+    </region>
+    <region left="306" top="522" width="170" height="47" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">P.d</e>
+          <e type="operand">D</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">2</e>
+          <e type="operand">S</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">F</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">E</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">T</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">t.cor</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="531" width="218" height="24" color="#000000" fontSize="10">
+      <text lang="eng">
+        <p fontName="Arial">Required Minimum Wall Thickness</p>
+      </text>
+    </region>
+    <region left="522" top="540" width="104" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mm</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">18.186</e>
+        </result>
+      </math>
+    </region>
+    <region left="837" top="558" width="150" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">20646.22</e>
+          <e type="operand">1676</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">12.3187</e>
+        </result>
+      </math>
+    </region>
+    <region left="522" top="594" width="96" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">in</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">0.716</e>
+        </result>
+      </math>
+    </region>
+    <region left="36" top="612" width="178" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">383</e>
+          <e type="operand" style="unit">bar</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">psi</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">5554.9454</e>
+        </result>
+      </math>
+    </region>
+    <region left="774" top="621" width="225" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">20646.22</e>
+          <e type="operand">20276.4</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">20276.4</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">%</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">1.8239</e>
+        </result>
+      </math>
+    </region>
+    <region left="36" top="639" width="178" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">281</e>
+          <e type="operand" style="unit">bar</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">psi</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">4075.5604</e>
+        </result>
+      </math>
+    </region>
+    <region left="783" top="702" width="139" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">631</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7698.2</e>
+        </result>
+      </math>
+    </region>
+    <region left="621" top="729" width="121" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1676</e>
+          <e type="operand">1646</e>
+          <e type="operator" args="2">-</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">30</e>
+        </result>
+      </math>
+    </region>
+    <region left="891" top="729" width="139" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">631</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7698.2</e>
+        </result>
+      </math>
+    </region>
+    <region left="1044" top="729" width="147" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">40.5</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">12.3444</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="756" top="756" width="209" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">7751.99</e>
+          <e type="operand">7698.2</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">7698.2</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">%</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">0.6987</e>
+        </result>
+      </math>
+    </region>
+    <region left="891" top="792" width="131" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">41</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">12.4968</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="576" top="801" width="158" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">20276.4</e>
+          <e type="operand">12.3187</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1645.9854</e>
+        </result>
+      </math>
+    </region>
+    <region left="270" top="810" width="139" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">628</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7661.6</e>
+        </result>
+      </math>
+    </region>
+    <region left="720" top="846" width="142" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">7751.99</e>
+          <e type="operand">628</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">12.3439</e>
+        </result>
+      </math>
+    </region>
+    <region left="387" top="855" width="162" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">7751.99</e>
+          <e type="operand">7661.6</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">%</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">101.1798</e>
+        </result>
+      </math>
+    </region>
+    <region left="882" top="855" width="196" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">40.5</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">628</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7752.2832</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="243" top="900" width="134" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">7661.6</e>
+          <e type="operand">12.344</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">620.674</e>
+        </result>
+      </math>
+    </region>
+    <region left="603" top="900" width="203" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1646</e>
+          <e type="operand">12.3187</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20276.5802</e>
+        </result>
+      </math>
+    </region>
+    <region left="738" top="927" width="187" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">626</e>
+          <e type="operand">12.3439</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7727.2814</e>
+        </result>
+      </math>
+    </region>
+    <region left="486" top="936" width="131" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">41</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">12.4968</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="1044" top="936" width="102" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">8</e>
+          <e type="operand">5</e>
+          <e type="operand">8</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">8.625</e>
+        </result>
+      </math>
+    </region>
+    <region left="234" top="954" width="98" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">P</e>
+          <e type="operand">3700</e>
+          <e type="operand" style="unit">psi</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="333" top="972" width="171" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">621</e>
+          <e type="operand">12.344</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7665.624</e>
+        </result>
+      </math>
+    </region>
+    <region left="522" top="972" width="170" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">12.3439</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">ft</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">40.4984</e>
+        </result>
+      </math>
+    </region>
+    <region left="738" top="972" width="150" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">7700</e>
+          <e type="operand">12.3439</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">623.7899</e>
+        </result>
+      </math>
+    </region>
+    <region left="234" top="999" width="98" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">8.625</e>
+          <e type="operand" style="unit">in</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="1044" top="1017" width="118" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1</e>
+          <e type="operand">5</e>
+          <e type="operand">16</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">+</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1.3125</e>
+        </result>
+      </math>
+    </region>
+    <region left="477" top="1026" width="180" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">41</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">631</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7885.4808</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="747" top="1035" width="187" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">624</e>
+          <e type="operand">12.3439</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7702.5936</e>
+        </result>
+      </math>
+    </region>
+    <region left="234" top="1044" width="90" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">S</e>
+          <e type="operand">358</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="477" top="1080" width="196" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">41</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">1657</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20707.1976</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="234" top="1098" width="204" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">t</e>
+          <e type="operand">P</e>
+          <e type="operand">D</e>
+          <e type="operand">2</e>
+          <e type="operand">S</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">0.5</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">mm</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">15.611</e>
+        </result>
+      </math>
+    </region>
+    <region left="783" top="1107" width="139" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1655</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20191</e>
+        </result>
+      </math>
+    </region>
+    <region left="783" top="1152" width="139" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">631</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">7698.2</e>
+        </result>
+      </math>
+    </region>
+    <region left="558" top="1179" width="170" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">20646.22</e>
+          <e type="operand">20191</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">%</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">102.2546</e>
+        </result>
+      </math>
+    </region>
+    <region left="351" top="1197" width="155" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1657</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20215.4</e>
+        </result>
+      </math>
+    </region>
+    <region left="567" top="1251" width="162" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">7751.99</e>
+          <e type="operand">7698.2</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">%</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">100.6987</e>
+        </result>
+      </math>
+    </region>
+    <region left="576" top="1332" width="131" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">41</e>
+          <e type="operand" style="unit">ft</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">12.4968</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="531" top="1395" width="170" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">20646.22</e>
+          <e type="operand">20252</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">%</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">101.9466</e>
+        </result>
+      </math>
+    </region>
+    <region left="162" top="1422" width="139" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1660</e>
+          <e type="operand">12.2</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20252</e>
+        </result>
+      </math>
+    </region>
+    <region left="261" top="1485" width="158" height="41" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">20252</e>
+          <e type="operand">12.3187</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1644.0046</e>
+        </result>
+      </math>
+    </region>
+    <region left="495" top="1512" width="203" height="24" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1645</e>
+          <e type="operand">12.3187</e>
+          <e type="operator" args="2">*</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">20264.2615</e>
+        </result>
+      </math>
+    </region>
+  </regions>
+</worksheet>

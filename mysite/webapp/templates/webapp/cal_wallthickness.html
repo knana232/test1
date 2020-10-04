@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h6> <a href="#">Engineering</a> > <a href="#">Piping</a> > <a href="{% url 'url_cal_wallthickness' %}">Wall Thickness</a></h6>
+<h4><b>CALCULATION:</b> PIPING WALL THICKNESS</h4>
+<h5>ASME B31.4 and B31.8</h5>
+<hr>
+<p>Failure: Bursting due to Internal Over Pressure (Hoop Stress)</p>
+<p style="text-align:left"> 
+    `t = (P*D)/(2*S*E*F*T)`
+</p><br/>
+
+<form method='post'>
+    {% csrf_token %}
+
+    {% for item0 in FORM %}
+        <div class='row'>
+        {% with i=forloop.counter k=forloop.counter|add:6 %}
+        {% if i <= 6 %}
+            <div class='col-xs-4 col-md-3'> {{item0.label}}</div>
+            <div class='col-xs-3 col-md-2'> {{item0}}</div>
+            {% for item1 in FORM %}
+                {% with j=forloop.counter %}
+                    {% if j == k %}
+                    <div class='col-xs-3 col-md-2'> {{item1}}</div>
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        {% endif %}
+        </div>
+        {% endwith %}
+    {% endfor %}
+    <br/>
+
+<!-- END -- FORM Input-->
+
+    <input type='submit' value='calculate'><br/><br/>
+    {% if RESULT %}
+    <div class="p-2 mb-2 bg-info text-white">
+        <strong>Results:</strong><br/>
+        {% for key,value in RESULT.main.items %}
+            <div class='row'>
+            <div class='col-xs-4 col-md-3'> {{ key }}</div>
+            <div class='col-xs-3 col-md-2'> {{ value|index:0 }} </div>
+            <div class='col-xs-3 col-md-2'> {{ value|index:1 }} </div> 
+            </div>  
+        {% endfor %}
+    </div><br/>
+
+    <div class="p-2 mb-2 bg-dark text-dark">
+        <strong>Information:</strong><br/>
+        {% for key,value in RESULT.info.items %}
+            <div class='row'>
+            <div class='col-xs-4 col-md-3'> {{ key }}</div>
+            <div class='col-xs-3 col-md-2'> {{ value|index:0 }} </div>
+            <div class='col-xs-3 col-md-2'> {{ value|index:1 }} </div> 
+            </div>  
+        {% endfor %}
+    </div><br/>
+
+    {% endif %}
+
+</form>
+
+{% endblock %}
