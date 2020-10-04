@@ -47,22 +47,37 @@ def wthk_asme(D,S,P,F,E,T,u_D=1,u_S=1,u_P=1,u_T='degC'):
     return {
         'main':{
             'Wall thickness, t:':[
-                str(round(t/0.001,decimal))+' mm',
-                str(round(t/0.0254,decimal))+' in'
+                str(round(t/0.001,decimal))+' '+'mm',
+                str(round(t/0.0254,decimal))+' '+'in'
                 ],
-            'Outer diameter, D:':[
-                str(round(D/0.001,decimal))+' mm',
-                str(round(D/0.0254,decimal))+' in'
-                ],
-
         },
         'info':{
+            'Outer diameter, D:':[
+                str(round(D/0.001,decimal))+' '+'mm',
+                str(round(D/0.0254,decimal))+' '+'in'
+                ],
+            'SMYS, S:':[
+                str(round(S/1e6,decimal))+' '+'MPa',
+                str(round(S/6.8948e6,decimal))+' '+'ksi'
+                ],
+            'Internal Pressure, P:':[
+                str(round(P/1e6,decimal))+' '+'MPa',
+                str(round(P/6894.7573,decimal))+' '+'psi'
+                ],
             'Temperature, Tp:':[
-                str(round(T,decimal))+' degC',
-                str(round(T*9/5+32,decimal))+' degF'
+                str(round(T,decimal))+' '+'degC',
+                str(round(T*9/5+32,decimal))+' '+'degF'
             ],
             'Temperature de-rating, T:':[
                 str(round(FT,decimal)),
+                '-'
+            ],
+            'Design Factor, F:':[
+                str(round(F,decimal)),
+                '-'
+            ],
+            'Weld Factor, E:':[
+                str(round(E,decimal)),
                 '-'
             ],
         }
